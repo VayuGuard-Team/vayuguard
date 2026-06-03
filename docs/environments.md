@@ -1,10 +1,10 @@
-# VayuGuard Environments
+Development -> .env.dev
+Staging -> .env.staging
+Production -> .env.prod
 
-## Development
-Purpose: Local development
+Secrets:
+- Mongo URI
+- JWT Secret
+- API Keys
 
-## Staging
-Purpose: Integration testing
-
-## Production
-Purpose: Live deployment
+Store in GitHub Secrets / AWS Secrets Manager

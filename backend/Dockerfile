@@ -1,7 +1,13 @@
-FROM node:20
+FROM node:18
 
 WORKDIR /app
 
+COPY package*.json ./
+
+RUN npm install
+
 COPY . .
 
-CMD ["node", "-e", "console.log('Backend Hello World')"]
+EXPOSE 3000
+
+CMD ["npm","start"]

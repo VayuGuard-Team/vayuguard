@@ -1,7 +1,5 @@
-FROM python:3.11
+FROM nginx:latest
 
-WORKDIR /app
+RUN echo "<h1>VayuGuard Data Pipeline</h1>" > /usr/share/nginx/html/index.html
 
-COPY . .
-
-CMD ["python", "-c", "print('Data Pipeline Hello World')"]
+EXPOSE 80

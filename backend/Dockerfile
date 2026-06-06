@@ -1,13 +1,5 @@
-FROM node:18
+FROM nginx:latest
 
-WORKDIR /app
+RUN echo "<h1>VayuGuard Backend Service</h1>" > /usr/share/nginx/html/index.html
 
-COPY package*.json ./
-
-RUN npm install
-
-COPY . .
-
-EXPOSE 5000
-
-CMD ["npm","start"]
+EXPOSE 80
